@@ -1,0 +1,492 @@
+{
+	"Connector": "Conta Azul", 
+	"Description": "Conta Azul is the business management platform, for micro and small companies, with an extension for accounting offices. It contains data linked with government, banks, etc. It is classified as an ERP system for small businesses.",
+	"endpoints":[
+		{
+			"name": "Products",
+			"description": "Contain all the products existing on Conta Azul",
+			"fields": [
+				{
+					"name": "id",
+					"description": "Unique ID of the product in Products"
+				},
+				{
+					"name": "name",
+					"description": "Name of the product in products"
+				},
+				{
+					"name": "value",
+					"description": "Unit price of the product in products"
+				},
+				{
+					"name": "cost",
+					"description": "Unit cost value of the product in products"
+				},
+				{
+					"name": "code",
+					"description": "The code of the product in products, a organization field that accepts any string"
+				},
+				{
+					"name": "barcode",
+					"description": "Barcode of the product in products, EAN format"
+				},
+				{
+					"name": "available_stock",
+					"description": "The quantity of available products in stock"
+				},
+				{
+					"name": "ncm_code",
+					"description": "The NCM code of the product in products"
+				},
+				{
+					"name": "cest_code",
+					"description": "The CEST  of the product in products"
+				},
+				{
+					"name": "net_weight",
+					"description": "The net weight of the product in products"
+				},
+				{
+					"name": "gross_weight",
+					"description": "The gross weight of the product in products"
+				},
+				{
+					"name": "category.id",
+					"description": "Unique ID of the product's category in products"
+				},
+				{
+					"name": "name",
+					"description": "Name of the product's category in products"
+				},
+				{
+					"name": "unit_measure",
+					"description": "The symbol of the unit measure of the product in products"
+				}
+			]
+		},
+		 {
+		 	"name": "Services",
+		 	"description": "Contain all the services existing on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"id",
+		 			"description": "Unique ID of the service on services"
+		 		},
+		 		{
+		 			"name":"name",
+		 			"description": "Name of the service on services"
+		 		},
+		 		{
+		 			"name":"type",
+		 			"description": "The type of the service on services"
+		 		},
+		 		{
+		 			"name":"value",
+		 			"description": "The value of the service on services"
+		 		},
+		 		{
+		 			"name":"cost",
+		 			"description": "The cost of the service on services"
+		 		},
+		 		{
+		 			"name":"code",
+		 			"description": "The code of the service on services, the organization field that accepts any string"
+		 		}
+		 	]
+		 },
+		 {
+		 	"name": "Sales",
+		 	"description": "Contain all the sales existing on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"id",
+		 			"description": "Unique ID of the sale on sales"
+		 		},
+		 		{
+		 			"name":"ContaAzulId",
+		 			"description": "A different type of ID of the sale on sales"
+		 		},
+		 		{
+		 			"name":"number",
+		 			"description": " A number generated for the sale on sales"
+		 		},
+		 		{
+		 			"name":"emission",
+		 			"description": "The emission date of the sale on sales"
+		 		},
+		 		{
+		 			"name":"status",
+		 			"description": "The status information of the sale on sales"
+		 		},
+		 		{
+		 			"name":"scheduled",
+		 			"description": "Inform if the sale on sales is scheduled"
+		 		},
+		 		{
+		 			"name":"customer.id",
+		 			"description": "The id of the customer of the sale on sales"
+		 		},
+		 		{
+		 			"name":"customer.name",
+		 			"description": "The name of the customer of the sale on sales"
+		 		},
+		 		{
+		 			"name":"customer.company_name",
+		 			"description": "The company name of the customer of the sale on sales, when the type is LEGAL"
+		 		},
+		 		{
+		 			"name":"customer.email",
+		 			"description": "The email of the customer of the sale on sales"
+		 		},
+		 		{
+		 			"name":"customer.person_type",
+		 			"description": "The type of the customer of the sale on sales"
+		 		},
+		 		{
+		 			"name":"discount.measure_unit",
+		 			"description": "The measure unit of the discount of the sale on sales"
+		 		},
+		 		{
+		 			"name":"discount.rate",
+		 			"description": "The rate of the discount of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.type",
+		 			"description": "The type of the payment of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.method",
+		 			"description": "The method of the payment of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.installments",
+		 			"description": "The list of installments of the payment of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.financial_account_id",
+		 			"description": "The unique ID of the bank account of the payment of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.financial_account.uuid",
+		 			"description": "The unique ID of the bank account of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.financial_account.name",
+		 			"description": "The name of the bank account of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.financial_account.accountType",
+		 			"description": "The type of bank account of the sale on sales"
+		 		},
+		 		{
+		 			"name":"payment.financial_account.billetConfigured",
+		 			"description": "Marks if the billet is configured of the sale on sales"
+		 		},
+		 		{
+		 			"name":"notes",
+		 			"description": "The additional information of the sale on sales"
+		 		},
+		 		{
+		 			"name":"shipping_cost",
+		 			"description": "The shipping cost of the sale on sales"
+		 		},
+		 		{
+		 			"name":"total",
+		 			"description": "The total value of the sale on sales"
+		 		},
+		 		{
+		 			"name":"seller.id",
+		 			"description": "The unique ID of the seller of the sale on sales"
+		 		},
+		 		{
+		 			"name":"seller.name",
+		 			"description": "The name of the seller of the sale on sales"
+		 		},
+		 		{
+		 			"name":"category_id",
+		 			"description": "The category of the sale on sales"
+		 		}
+		 	]
+		 },
+		 {
+		 	"name": "Sale_items",
+		 	"description": "Contain all the sale items of the sale existing on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"description",
+		 			"description": "Unique ID of the item on sale items"
+		 		},
+		 		{
+		 			"name":"quantity",
+		 			"description": "The quantity of the item on sale items"
+		 		},
+		 		{
+		 			"name":"item.id",
+		 			"description": "The unique ID of the item on sale items"
+		 		},
+		 		{
+		 			"name":"item.name",
+		 			"description": "The name of the item on sale items"
+		 		},
+		 		{
+		 			"name":"item.value",
+		 			"description": "The value of the item on sale items"
+		 		},
+		 		{
+		 			"name":"item.cost",
+		 			"description": "The cost of the item on sale items"
+		 		},
+		 		{
+		 			"name":"item_type",
+		 			"description": "The type of the item on sale items, can be PRODUCT or SERVICE"
+		 		},
+		 		{
+		 			"name":"item.value",
+		 			"description": "The value of the negotiation item on sale items"
+		 		}
+		 	]
+		 },
+		 {
+		 	"name": "Customers",
+		 	"description": "Contain all the customers existing on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"id",
+		 			"description": "Unique ID of the customer on customers"
+		 		},
+		 		{
+		 			"name":"name",
+		 			"description": "The name of the customer on customers"
+		 		},
+		 		{
+		 			"name":"company_name",
+		 			"description": " The company name of the customer on customers when the type of the customer is LEGAL"
+		 		},
+		 		{
+		 			"name":"email",
+		 			"description": "The email of the customer on customers"
+		 		},
+		 		{
+		 			"name":"business_phone",
+		 			"description": "The business phone number of the customer on customers"
+		 		},
+		 		{
+		 			"name":"mobile_phone",
+		 			"description": "Inform mobile phone number of the customer on customers"
+		 		},
+		 		{
+		 			"name":"person_type",
+		 			"description": "The type of the customer on customers"
+		 		},
+		 		{
+		 			"name":"document",
+		 			"description": "The document number of the customer on customers, equivalent to 'CPF/CNPJ'"
+		 		},
+		 		{
+		 			"name":"identity_document",
+		 			"description": "The identity number of the customer on customers, equivalent to 'RG'"
+		 		},
+		 		{
+		 			"name":"state_registration_number",
+		 			"description": "The state registration number of the customer on customers - 'Inscrição estadual'"
+		 		},
+		 		{
+		 			"name":"state_registration_type",
+		 			"description": "The state registration type of the state registration number of the customer on customers"
+		 		},
+		 		{
+		 			"name":"city_registration_number",
+		 			"description": "The city registration number of the customer on customers - 'Inscrição municipal'"
+		 		},
+		 		{
+		 			"name":"date_of_birth",
+		 			"description": "The date of birth of the customer on customers"
+		 		},
+		 		{
+		 			"name":"notes",
+		 			"description": "The notes and additional information of the customer on customers"
+		 		},
+		 		{
+		 			"name":"created_at",
+		 			"description": "The creation date of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.street",
+		 			"description": "The street name of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"addtess.number",
+		 			"description": "The street number of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.complement",
+		 			"description": "The complement of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.zip_code",
+		 			"description": "The zip code (equivalent to 'CEP') of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.neighborhood",
+		 			"description": "The neighborhood of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.city.name",
+		 			"description": "The name of the city of the address of the customer on customers"
+		 		},
+		 		{
+		 			"name":"address.state.name",
+		 			"description": "The state of address of the customer on customers"
+		 		}
+		 	]
+		 },
+		 {
+		 	"name": "Suppliers",
+		 	"description": "Contain all the suppliers existing on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"id",
+		 			"description": "Unique ID of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"name",
+		 			"description": "The name of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"company_name",
+		 			"description": " The company name of the supplier on suppliers when the type of the customer is LEGAL"
+		 		},
+		 		{
+		 			"name":"email",
+		 			"description": "The email of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"business_phone",
+		 			"description": "The business phone number of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"mobile_phone",
+		 			"description": "Inform mobile phone number of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"person_type",
+		 			"description": "The type of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"document",
+		 			"description": "The document number of the supplier on suppliers, equivalent to 'CPF/CNPJ'"
+		 		},
+		 		{
+		 			"name":"identity_document",
+		 			"description": "The identity number of the supplier on suppliers, equivalent to 'RG'"
+		 		},
+		 		{
+		 			"name":"state_registration_number",
+		 			"description": "The state registration number of the supplier on suppliers - 'Inscrição estadual'"
+		 		},
+		 		{
+		 			"name":"state_registration_type",
+		 			"description": "The state registration type of the state registration number of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"city_registration_number",
+		 			"description": "The city registration number of the supplier on suppliers - 'Inscrição municipal'"
+		 		},
+		 		{
+		 			"name":"date_of_birth",
+		 			"description": "The date of birth of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"notes",
+		 			"description": "The notes and additional informatio of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"foreignId",
+		 			"description": "The creation date of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"contactName",
+		 			"description": "The creation date of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.street",
+		 			"description": "The street name of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"addtess.number",
+		 			"description": "The street number of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.complement",
+		 			"description": "The complement of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.zip_code",
+		 			"description": "The zip code (equivalent to 'CEP') of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.neighborhood",
+		 			"description": "The neighborhood of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.city.name",
+		 			"description": "The name of the city of the address of the supplier on suppliers"
+		 		},
+		 		{
+		 			"name":"address.state.name",
+		 			"description": "The state of address of the supplier on suppliers"
+		 		}
+		 	]
+		 },
+		 {
+		 	"name": "Plans",
+		 	"description": "Contain all the infomration of the users plan registerd on Conta Azul",
+		 	"fields": [
+		 		{
+		 			"name":"userCount",
+		 			"description": "Quantity of registered users in the company on plans"
+		 		},
+		 		{
+		 			"name":"userLimit",
+		 			"description": "Limit of users in the company on plans"
+		 		},
+		 		{
+		 			"name":"billetCount",
+		 			"description": "Quantity of billets issued in the period on plans"
+		 		},
+		 		{
+		 			"name":"billetLimit",
+		 			"description": "Limit of billets on plans"
+		 		},
+		 		{
+		 			"name":"productInvoiceCount",
+		 			"description": "Quantity of product invoices issued in the period on plans"
+		 		},
+		 		{
+		 			"name":"productInvoiceLimit",
+		 			"description": "Limit of product invoices on plans"
+		 		},
+		 		{
+		 			"name":"serviceInvoiceCount",
+		 			"description": "Quantity of service invoices issued in the period on plans"
+		 		},
+		 		{
+		 			"name":"serviceInvoiceLimit",
+		 			"description": "Limit of services on plans"
+		 		},
+		 		{
+		 			"name":"startPeriod",
+		 			"description": "Start period on plans"
+		 		},
+		 		{
+		 			"name":"endPeriod",
+		 			"description": "End period on plans"
+		 		},
+		 		{
+		 			"name":"features",
+		 			"description": "Array of feature restricion details on plans"
+		 		}
+		 	]
+		 }
+	]
+}

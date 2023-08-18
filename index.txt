@@ -1,0 +1,138 @@
+Table: Products
+Description: Contain all the products existing on Conta Azul
+Columns:
+- id: Unique ID of the product in Products
+- name: Name of the product in products
+- value: Unit price of the product in products
+- cost: Unit cost value of the product in products
+- code: The code of the product in products, a organization field that accepts any string
+- barcode: Barcode of the product in products, EAN format
+- available_stock: The quantity of available products in stock
+- ncm_code: The NCM code of the product in products
+- cest_code: The CEST  of the product in products
+- net_weight: The net weight of the product in products
+- gross_weight: The gross weight of the product in products
+- category.id: Unique ID of the product's category in products
+- name: Name of the product's category in products
+- unit_measure: The symbol of the unit measure of the product in products
+
+Table: Services
+Description: Contain all the services existing on Conta Azul
+Columns:
+- id: Unique ID of the service on services
+- name: Name of the service on services
+- type: The type of the service on services
+- value: The value of the service on services
+- cost: The cost of the service on services
+- code: The code of the service on services, the organization field that accepts any string
+
+Table: Sales
+Description: Contain all the sales existing on Conta Azul
+Columns:
+- id: Unique ID of the sale on sales
+- ContaAzulId: A different type of ID of the sale on sales
+- number:  A number generated for the sale on sales
+- emission: The emission date of the sale on sales
+- status: The status information of the sale on sales
+- scheduled: Inform if the sale on sales is scheduled
+- customer.id: The id of the customer of the sale on sales
+- customer.name: The name of the customer of the sale on sales
+- customer.company_name: The company name of the customer of the sale on sales, when the type is LEGAL
+- customer.email: The email of the customer of the sale on sales
+- customer.person_type: The type of the customer of the sale on sales
+- discount.measure_unit: The measure unit of the discount of the sale on sales
+- discount.rate: The rate of the discount of the sale on sales
+- payment.type: The type of the payment of the sale on sales
+- payment.method: The method of the payment of the sale on sales
+- payment.installments: The list of installments of the payment of the sale on sales
+- payment.financial_account_id: The unique ID of the bank account of the payment of the sale on sales
+- payment.financial_account.uuid: The unique ID of the bank account of the sale on sales
+- payment.financial_account.name: The name of the bank account of the sale on sales
+- payment.financial_account.accountType: The type of bank account of the sale on sales
+- payment.financial_account.billetConfigured: Marks if the billet is configured of the sale on sales
+- notes: The additional information of the sale on sales
+- shipping_cost: The shipping cost of the sale on sales
+- total: The total value of the sale on sales
+- seller.id: The unique ID of the seller of the sale on sales
+- seller.name: The name of the seller of the sale on sales
+- category_id: The category of the sale on sales
+
+Table: Sale_items
+Description: Contain all the sale items of the sale existing on Conta Azul
+Columns:
+- description: Unique ID of the item on sale items
+- quantity: The quantity of the item on sale items
+- item.id: The unique ID of the item on sale items
+- item.name: The name of the item on sale items
+- item.value: The value of the item on sale items
+- item.cost: The cost of the item on sale items
+- item_type: The type of the item on sale items, can be PRODUCT or SERVICE
+- item.value: The value of the negotiation item on sale items
+
+Table: Customers
+Description: Contain all the customers existing on Conta Azul
+Columns:
+- id: Unique ID of the customer on customers
+- name: The name of the customer on customers
+- company_name:  The company name of the customer on customers when the type of the customer is LEGAL
+- email: The email of the customer on customers
+- business_phone: The business phone number of the customer on customers
+- mobile_phone: Inform mobile phone number of the customer on customers
+- person_type: The type of the customer on customers
+- document: The document number of the customer on customers, equivalent to 'CPF/CNPJ'
+- identity_document: The identity number of the customer on customers, equivalent to 'RG'
+- state_registration_number: The state registration number of the customer on customers - 'Inscrição estadual'
+- state_registration_type: The state registration type of the state registration number of the customer on customers
+- city_registration_number: The city registration number of the customer on customers - 'Inscrição municipal'
+- date_of_birth: The date of birth of the customer on customers
+- notes: The notes and additional information of the customer on customers
+- created_at: The creation date of the customer on customers
+- address.street: The street name of the address of the customer on customers
+- addtess.number: The street number of the address of the customer on customers
+- address.complement: The complement of the address of the customer on customers
+- address.zip_code: The zip code (equivalent to 'CEP') of the address of the customer on customers
+- address.neighborhood: The neighborhood of the address of the customer on customers
+- address.city.name: The name of the city of the address of the customer on customers
+- address.state.name: The state of address of the customer on customers
+
+Table: Suppliers
+Description: Contain all the suppliers existing on Conta Azul
+Columns:
+- id: Unique ID of the supplier on suppliers
+- name: The name of the supplier on suppliers
+- company_name:  The company name of the supplier on suppliers when the type of the customer is LEGAL
+- email: The email of the supplier on suppliers
+- business_phone: The business phone number of the supplier on suppliers
+- mobile_phone: Inform mobile phone number of the supplier on suppliers
+- person_type: The type of the supplier on suppliers
+- document: The document number of the supplier on suppliers, equivalent to 'CPF/CNPJ'
+- identity_document: The identity number of the supplier on suppliers, equivalent to 'RG'
+- state_registration_number: The state registration number of the supplier on suppliers - 'Inscrição estadual'
+- state_registration_type: The state registration type of the state registration number of the supplier on suppliers
+- city_registration_number: The city registration number of the supplier on suppliers - 'Inscrição municipal'
+- date_of_birth: The date of birth of the supplier on suppliers
+- notes: The notes and additional informatio of the supplier on suppliers
+- foreignId: The creation date of the supplier on suppliers
+- contactName: The creation date of the supplier on suppliers
+- address.street: The street name of the address of the supplier on suppliers
+- addtess.number: The street number of the address of the supplier on suppliers
+- address.complement: The complement of the address of the supplier on suppliers
+- address.zip_code: The zip code (equivalent to 'CEP') of the address of the supplier on suppliers
+- address.neighborhood: The neighborhood of the address of the supplier on suppliers
+- address.city.name: The name of the city of the address of the supplier on suppliers
+- address.state.name: The state of address of the supplier on suppliers
+
+Table: Plans
+Description: Contain all the infomration of the users plan registerd on Conta Azul
+Columns:
+- userCount: Quantity of registered users in the company on plans
+- userLimit: Limit of users in the company on plans
+- billetCount: Quantity of billets issued in the period on plans
+- billetLimit: Limit of billets on plans
+- productInvoiceCount: Quantity of product invoices issued in the period on plans
+- productInvoiceLimit: Limit of product invoices on plans
+- serviceInvoiceCount: Quantity of service invoices issued in the period on plans
+- serviceInvoiceLimit: Limit of services on plans
+- startPeriod: Start period on plans
+- endPeriod: End period on plans
+- features: Array of feature restricion details on plans
